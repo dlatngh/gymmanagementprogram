@@ -1,7 +1,7 @@
 # ayo david
 FIRST TIME ONLY: File --> New --> Project from Version Control --> Copy and paste https://github.com/dlatngh/sm--a3.git into the URL box
 
-then open terminal in sm-a3 do `git pull`
+then open terminal in sm-a3 do `git pull origin main`
 
 this is gonna copy files from github (remote repo) and put it on ur device (local repo).
 
