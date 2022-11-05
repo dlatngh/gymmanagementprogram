@@ -1,0 +1,41 @@
+.tab {
+    -fx-background-color: #32353a;
+    -fx-font: 16px "Montserrat-Bold";
+    -fx-background-radius: 0;
+}
+
+.tab-label {
+    -fx-text-fill: #ffffff;
+}
+
+.tab-header-background {
+    -fx-background-color: #32353a;
+}
+.tab:focused .tab-label {
+    -fx-text-fill: #ffffff
+}
+
+.tab-pane {
+    -fx-tab-min-width:150px;
+    -fx-tab-max-width:150px;
+    -fx-tab-min-height:50px;
+    -fx-tab-max-height:50px;
+    -fx-background-color: #32353a;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #1e1e1e;
+
+}
+
+.tab:selected .tab-label
+{
+    -fx-text-fill: #de3845;
+    -fx-background-color: #1e1e1e;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/Montserrat-Bold.ttf');
+}

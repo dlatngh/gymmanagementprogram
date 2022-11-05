@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/Montserrat-Bold.ttf');
+}
+
+@font-face{
+    font-family:'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+.text {
+    -fx-font-family: "Roboto";
+}
+
+.button{
+    -fx-font-family:"Montserrat"
+}
+.radio-button{
+    -fx-font-family:"Montserrat"
+}
+
+.tab {
+    -fx-font-family:"Montserrat"
+}
