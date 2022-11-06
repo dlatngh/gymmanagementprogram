@@ -125,7 +125,7 @@
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -179,7 +179,7 @@
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -272,7 +272,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -353,7 +353,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -434,7 +434,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -515,7 +515,7 @@
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
-                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
+                                                      <TextArea editable="false" layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -530,7 +530,7 @@
                                       <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;">
                                               <children>
-                                    <TextArea layoutY="106.0" prefHeight="558.0" prefWidth="1280.0" />
+                                    <TextArea editable="false" layoutY="106.0" prefHeight="558.0" prefWidth="1280.0" />
                                                         <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="490.0" layoutY="235.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@../../../images/Scarlet-Knight.png" />
