@@ -23,16 +23,32 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;">
                             <children>
-                                <Text layoutX="59.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" text="Gym Manager" wrappingWidth="193.384765625">
-                                    <font>
-                                        <Font name="Montserrat Bold" size="20.0" />
-                                    </font>
-                                </Text>
-                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="35.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="33.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../../../images/SeekPng.com_rutgers-logo-png_2466991.png" />
                                     </image>
                                 </ImageView>
+                                <Text fill="#de3845" layoutX="57.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GROUP 110 GYM MANAGER" wrappingWidth="429.384765625">
+                                    <font>
+                                        <Font name="Montserrat Bold" size="30.0" />
+                                    </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                                </Text>
+                        <Text fill="WHITE" layoutX="57.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GUIDE:" wrappingWidth="308.13671875">
+                           <font>
+                              <Font name="Montserrat Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Text>
+                        <Text fill="WHITE" layoutX="57.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To add or remove members to the member list, Click on the Membership tab and fill out the information needed accordingly." wrappingWidth="1117.84375">
+                           <font>
+                              <Font name="Roboto" size="18.0" />
+                           </font>
+                        </Text>
                             </children>
                         </AnchorPane>
                     </content>
@@ -41,7 +57,7 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="1290.0" style="-fx-background-color: #1e1e1e;">
                             <children>
-                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="35.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="33.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../../../images/SeekPng.com_rutgers-logo-png_2466991.png" />
                                     </image>
@@ -97,17 +113,12 @@
                                         <Font name="Montserrat Bold" size="15.0" />
                                     </font>
                                 </RadioButton>
-                                <RadioButton layoutX="735.0" layoutY="344.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="134.0" style="-fx-text-fill: #ffffff; -fx-font-family: Montserrat;" stylesheets="@../../../radio.css" text="PREMIUM">
+                                <RadioButton layoutX="737.0" layoutY="344.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="108.0" style="-fx-text-fill: #ffffff; -fx-font-family: Montserrat;" stylesheets="@../../../radio.css" text="PREMIUM">
                                     <font>
                                         <Font name="Montserrat Bold" size="15.0" />
                                     </font>
                                 </RadioButton>
-                                <Button layoutX="500.0" layoutY="400.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="120.0" style="-fx-background-radius: 30px; -fx-background-color: #ffffff; -fx-font-family: Montserrat;" stylesheets="@../../../button.css" text="ADD MEMBER" textAlignment="CENTER" wrapText="true">
-                                    <font>
-                                        <Font name="Montserrat Bold" size="14.0" />
-                                    </font>
-                                </Button>
-                                <Button layoutX="675.0" layoutY="400.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="120.0" style="-fx-background-radius: 30px; -fx-font-family: Montserrat;" stylesheets="@../../../button.css" text="REMOVE MEMBER" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                <Button layoutX="564.0" layoutY="401.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="181.0" style="-fx-background-radius: 30px; -fx-background-color: #ffffff; -fx-font-family: Montserrat;" stylesheets="@../../../button.css" text="ADD MEMBER" textAlignment="CENTER" wrapText="true">
                                     <font>
                                         <Font name="Montserrat Bold" size="14.0" />
                                     </font>
@@ -116,15 +127,99 @@
                         </AnchorPane>
                     </content>
                 </Tab>
+            <Tab text="MEMBER LOOKUP">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;">
+                     <children>
+                        <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="33.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/SeekPng.com_rutgers-logo-png_2466991.png" />
+                           </image>
+                        </ImageView>
+                        <TabPane prefHeight="485.0" prefWidth="1290.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="REMOVE MEMBER">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="330.0" style="-fx-background-color: #1e1e1e;">
+                                       <children>
+                                          <ImageView cache="true" fitHeight="337.0" fitWidth="295.0" layoutX="501.0" layoutY="46.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/SeekPng.com_rutgers-logo-png_2466991.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fill="#de3845" layoutX="445.0" layoutY="87.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBER LOOKUP:" textAlignment="CENTER" wrappingWidth="400.0">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="42.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Text>
+                                          <Text layoutX="304.0" layoutY="187.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" text="First Name:" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField layoutX="445.0" layoutY="168.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="400.0" />
+                                          <Text layoutX="305.0" layoutY="234.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" text="Last Name:" textAlignment="RIGHT" wrappingWidth="116.739990234375">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField layoutX="445.0" layoutY="215.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="400.0">
+                                             <font>
+                                                <Font name="Roboto" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Text layoutX="284.0" layoutY="279.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" text="Date of Birth:" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <DatePicker layoutX="445.0" layoutY="260.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="400.0" />
+                                          <Button layoutX="564.0" layoutY="333.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="182.0" style="-fx-background-radius: 30px; -fx-background-color: #ffffff; -fx-font-family: Montserrat;" stylesheets="@../../../button.css" text="FIND MEMBER" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Untitled Tab 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
                 <Tab text="FITNESS CLASSES">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;">
                             <children>
-                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="35.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+                                <ImageView cache="true" fitHeight="418.0" fitWidth="384.0" layoutX="467.0" layoutY="33.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../../../images/SeekPng.com_rutgers-logo-png_2466991.png" />
                                     </image>
                                 </ImageView>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Untitled Tab 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                            <Tab text="Untitled Tab 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
                             </children>
                         </AnchorPane>
                     </content>
