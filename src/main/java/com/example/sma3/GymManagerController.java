@@ -31,6 +31,5 @@ public class GymManagerController {
     }
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Running Gym Manager...");
     }
 }

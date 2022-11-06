@@ -20,7 +20,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #32353a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="1080.0" maxWidth="1920.0" minHeight="600.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #32353a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
          <children>
       <GridPane>
         <columnConstraints>
@@ -125,6 +125,7 @@
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -154,7 +155,7 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </Text>
-                                                      <Text fill="WHITE" layoutX="296.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:" textAlignment="RIGHT">
+                                                      <Text fill="WHITE" layoutX="295.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:" textAlignment="RIGHT">
                                                          <font>
                                                             <Font name="Montserrat Bold" size="20.0" />
                                                          </font>
@@ -162,7 +163,7 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </Text>
-                                                      <Text fill="WHITE" layoutX="254.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH:" textAlignment="RIGHT">
+                                                      <Text fill="WHITE" layoutX="257.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH:" textAlignment="RIGHT">
                                                          <font>
                                                             <Font name="Montserrat Bold" size="20.0" />
                                                          </font>
@@ -170,14 +171,15 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </Text>
-                                                      <TextField layoutX="440.0" layoutY="290.0" prefHeight="25.0" prefWidth="400.0" />
+                                                      <TextField layoutX="440.0" layoutY="260.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="200.0" prefHeight="25.0" prefWidth="400.0" />
-                                                      <DatePicker layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
-                                                      <Button layoutX="558.0" layoutY="470.0" mnemonicParsing="false" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ffffff;" text="REMOVE MEMBER" textAlignment="CENTER">
+                                                      <DatePicker layoutX="440.0" layoutY="320.0" prefHeight="25.0" prefWidth="400.0" />
+                                                      <Button layoutX="558.0" layoutY="388.0" mnemonicParsing="false" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ffffff;" text="REMOVE MEMBER" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -270,6 +272,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -350,6 +353,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -430,6 +434,7 @@
                                                       </Text>
                                                       <TextField layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
                                                       <TextField layoutX="440.0" layoutY="430.0" prefHeight="25.0" prefWidth="400.0" />
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
@@ -510,6 +515,7 @@
                                                             <Font size="17.0" />
                                                          </font>
                                                       </Button>
+                                                      <TextArea layoutX="910.0" layoutY="55.0" prefHeight="500.0" prefWidth="300.0" />
                                                                       </children>
                                                                   </AnchorPane>
                                                               </content>
