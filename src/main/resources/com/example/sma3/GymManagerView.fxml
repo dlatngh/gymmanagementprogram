@@ -51,7 +51,7 @@
                                                                             <Image url="@../../../images/Scarlet-Knight.png" />
                                                                         </image>
                                                                     </ImageView>
-                                                                    <Text fill="#de3845" layoutX="470.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBER INFORMATION:" textAlignment="CENTER" wrappingWidth="370.0">
+                                                                    <Text fill="#de3845" layoutX="455.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBER INFORMATION:" textAlignment="CENTER" wrappingWidth="370.0">
                                                                         <font>
                                                                             <Font name="Montserrat Bold" size="46.0" />
                                                                         </font>
@@ -67,6 +67,7 @@
                                                                             <DropShadow />
                                                                         </effect>
                                                                     </Text>
+                                                                    <TextField layoutX="440.0" layoutY="170.0" prefHeight="25.0" prefWidth="400.0" />
                                                                     <Text fill="WHITE" layoutX="297.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:" textAlignment="RIGHT">
                                                                         <font>
                                                                             <Font name="Montserrat Bold" size="20.0" />
@@ -75,6 +76,7 @@
                                                                             <DropShadow />
                                                                         </effect>
                                                                     </Text>
+                                                                    <TextField layoutX="440.0" layoutY="230.0" prefHeight="25.0" prefWidth="400.0" />
                                                                     <Text fill="WHITE" layoutX="255.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH:" textAlignment="RIGHT">
                                                                         <font>
                                                                             <Font name="Montserrat Bold" size="20.0" />
@@ -83,6 +85,7 @@
                                                                             <DropShadow />
                                                                         </effect>
                                                                     </Text>
+                                                <DatePicker layoutX="440.0" layoutY="290.0" prefHeight="25.0" prefWidth="400.0" />
                                                                     <Text fill="WHITE" layoutX="307.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOCATION:" textAlignment="RIGHT">
                                                                         <font>
                                                                             <Font name="Montserrat Bold" size="20.0" />
@@ -91,10 +94,7 @@
                                                                             <DropShadow />
                                                                         </effect>
                                                                     </Text>
-                                                                    <TextField layoutX="455.0" layoutY="171.0" prefHeight="25.0" prefWidth="400.0" />
-                                                                    <TextField layoutX="455.0" layoutY="230.0" prefHeight="25.0" prefWidth="400.0" />
-                                                                    <TextField layoutX="455.0" layoutY="350.0" prefHeight="25.0" prefWidth="400.0" />
-                                                <DatePicker layoutX="455.0" layoutY="290.0" prefHeight="25.0" prefWidth="400.0" />
+                                                                    <TextField layoutX="440.0" layoutY="350.0" prefHeight="25.0" prefWidth="400.0" />
                                                 <Text fill="WHITE" layoutX="273.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBERSHIP:" textAlignment="RIGHT">
                                                    <font>
                                                       <Font name="Montserrat Bold" size="20.0" />
@@ -121,7 +121,7 @@
                                                       <Font name="Montserrat Bold" size="12.0" />
                                                    </font>
                                                 </RadioButton>
-                                                <Button layoutX="591.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-radius: 20; -fx-border-radius: 20;" text="ADD MEMBER" textAlignment="CENTER">
+                                                <Button layoutX="575.0" layoutY="470.0" mnemonicParsing="false" style="-fx-background-radius: 20; -fx-border-radius: 20;" text="ADD MEMBER" textAlignment="CENTER">
                                                    <font>
                                                       <Font size="17.0" />
                                                    </font>
@@ -147,6 +147,38 @@
                                                       <DropShadow />
                                                    </effect>
                                                 </Text>
+                                                <Text fill="WHITE" layoutX="292.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME:" textAlignment="RIGHT">
+                                                   <font>
+                                                      <Font name="Montserrat Bold" size="20.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </Text>
+                                                <Text fill="WHITE" layoutX="296.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:" textAlignment="RIGHT">
+                                                   <font>
+                                                      <Font name="Montserrat Bold" size="20.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </Text>
+                                                <Text fill="WHITE" layoutX="254.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH:" textAlignment="RIGHT">
+                                                   <font>
+                                                      <Font name="Montserrat Bold" size="20.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </Text>
+                                                <TextField layoutX="440.0" layoutY="290.0" prefHeight="25.0" prefWidth="400.0" />
+                                                <TextField layoutX="440.0" layoutY="200.0" prefHeight="25.0" prefWidth="400.0" />
+                                                <DatePicker layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="400.0" />
+                                                <Button layoutX="558.0" layoutY="470.0" mnemonicParsing="false" style="-fx-background-radius: 20; -fx-border-radius: 20;" text="REMOVE MEMBER" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </Button>
                                                                 </children>
                                                             </AnchorPane>
                                                         </content>
