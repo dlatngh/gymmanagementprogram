@@ -14,6 +14,12 @@
 .tab:focused .tab-label {
     -fx-text-fill: #ffffff
 }
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+     -fx-focus-color: transparent;
+     -fx-border-style: segments(0.166667em, 0.166667em);
+     -fx-border-width: 1;
+     -fx-border-color: -fx-focus-color;
+}
 
 .tab-pane {
     -fx-tab-min-width:150px;
@@ -34,6 +40,8 @@
     -fx-text-fill: #de3845;
     -fx-background-color: #1e1e1e;
 }
+
+
 
 @font-face {
     font-family: 'Montserrat-Bold';

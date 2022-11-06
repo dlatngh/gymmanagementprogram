@@ -17,6 +17,7 @@ public class GymManagerMain extends Application {
         stage.getIcons().add(new Image("file:src/main/resources/images/Scarlet-Knight.png"));
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
