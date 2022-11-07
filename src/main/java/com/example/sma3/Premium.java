@@ -59,7 +59,7 @@ public class Premium extends Family {
     /**
      * uses up a guest pass
      */
-    public void useGuessPasses() {
+    public void useGuestPasses() {
         this.guestPasses = this.guestPasses - 1;
     }
 
@@ -79,6 +79,6 @@ public class Premium extends Family {
      */
     @Override
     public String toString() {
-        return super.getMemberString() + ", (Premium) Guess-pass remaining: " + guestPasses;
+        return super.getMemberString() + ", (Premium) guest-passes remaining: " + guestPasses;
     }
 }

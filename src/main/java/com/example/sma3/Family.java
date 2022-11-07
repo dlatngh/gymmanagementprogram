@@ -47,7 +47,7 @@ public class Family extends Member {
      */
     @Override
     public String toString() {
-        return super.toString() + ", (Family) guest-pass remaining: " + guestPasses;
+        return super.toString() + ", (Family) guest-passes remaining: " + guestPasses;
     }
 
     /**

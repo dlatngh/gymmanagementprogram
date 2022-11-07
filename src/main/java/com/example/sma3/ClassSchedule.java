@@ -22,12 +22,18 @@ public class ClassSchedule {
 
     /**
      * Loads fitness class schedule from classSchedule.txt
+     *
+     * @return list of loaded classes
      */
-    public void loadSchedule() throws FileNotFoundException {
+    public String loadSchedule() throws FileNotFoundException {
+        StringBuilder content = new StringBuilder();
+        String prefix;
+        String suffix;
         String className, instructor, timeString, locationString;
         File text = new File("src/classSchedule.txt");
         Scanner schedule = new Scanner(text);
-        System.out.println("-Fitness classes loaded-");
+        prefix = "\n-Fitness classes loaded-";
+        content.append(prefix).append("\n");
         while (schedule.hasNextLine()) {
             className = schedule.next();
             instructor = schedule.next();
@@ -45,10 +51,11 @@ public class ClassSchedule {
                     break;
                 }
             }
-            System.out.println(fitnessClass);
+            content.append(fitnessClass).append("\n");
         }
-        System.out.println("-end of class list.");
-        System.out.println();
+        suffix = "-end of class list.";
+        content.append(suffix).append("\n");
+        return content.toString();
     }
 
     /**
@@ -212,30 +219,31 @@ public class ClassSchedule {
     /**
      * Prints the Fitness Class Schedule
      */
-    public void print() {
-        if (classes[0] == null) {
-            System.out.println("Fitness class schedule is empty.");
-        } else {
-            System.out.println("-Fitness classes-");
+    public String print() {
+        StringBuilder content = new StringBuilder();
+        String error = "Fitness class schedule is empty.\n";
+        String prefix = "\n-Fitness classes-\n";
+        if (classes[0] == null) return error;
+        else {
+            content.append(prefix);
             for (FitnessClass fitnessClass : classes) {
                 if (fitnessClass != null) {
-                    System.out.println(fitnessClass);
+                    content.append(fitnessClass).append("\n");
                     if (!fitnessClass.getMemberList().isEmpty()) {
-                        System.out.println("- Participants -");
-                        for (int i = 0; i < fitnessClass.getMemberList().size(); i++) {
-                            System.out.println("   " + fitnessClass.getMemberList().get(i));
-                        }
+                        content.append("- Participants -\n");
+                        for (int i = 0; i < fitnessClass.getMemberList().size(); i++)
+                            content.append("   ").append(fitnessClass.getMemberList().get(i)).append("\n");
                     }
                     if (!fitnessClass.getGuestList().isEmpty()) {
-                        System.out.println("- Guests -");
-                        for (int i = 0; i < fitnessClass.getGuestList().size(); i++) {
-                            System.out.println("   " + fitnessClass.getGuestList().get(i));
-                        }
+                        content.append("- Guests -\n");
+                        for (int i = 0; i < fitnessClass.getGuestList().size(); i++)
+                            content.append("   ").append(fitnessClass.getGuestList().get(i)).append("\n");
                     }
                 }
             }
-            System.out.println("-end of class list.");
+            content.append("-end of class list.\n");
         }
+        return content.toString();
     }
 
     /**

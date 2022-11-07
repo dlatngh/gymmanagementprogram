@@ -542,7 +542,7 @@ public class GymManager {
             if (member instanceof Premium) {
                 if (((Premium) member).getGuestPasses() > 0) {
                     classSchedule.checkGuest(instructorsClass, member);
-                    ((Premium) member).useGuessPasses();
+                    ((Premium) member).useGuestPasses();
                     printGuestCheckInSuccess(member, instructorsClass);
                 } else {
                     printNoGuestPasses(member.getName());

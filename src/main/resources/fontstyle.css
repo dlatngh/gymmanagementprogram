@@ -7,17 +7,8 @@
     font-family:'Roboto-Regular';
     src: url('fonts/Roboto-Regular.ttf');
 }
-.text {
-    -fx-font-family: "Roboto";
-}
 
-.button{
-    -fx-font-family:"Montserrat"
-}
-.radio-button{
-    -fx-font-family:"Montserrat"
-}
-
-.tab {
-    -fx-font-family:"Montserrat"
+@font-face{
+    font-family:'JetBrainsMono';
+    src: url('fonts/JetBrainsMono-Regular.ttf');
 }

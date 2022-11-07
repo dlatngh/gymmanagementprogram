@@ -34,11 +34,7 @@ public class MemberDatabase {
      * @return index if member is found, -1 otherwise.
      */
     private int find(Member member) {
-        for (int i = 0; i < mlist.length; i++) {
-            if (member.equals(mlist[i])) {
-                return i;
-            }
-        }
+        for (int i = 0; i < mlist.length; i++) if (member.equals(mlist[i])) return i;
         return NOT_FOUND;
     }
 
@@ -63,11 +59,8 @@ public class MemberDatabase {
     public Member findMember(String fname, String lname, Date dob) {
         Member targetMember = null;
         for (Member member : mlist) {
-            if (member != null) {
-                if (member.getFName().equals(fname) && member.getLName().equals(lname) && member.getDob().equals(dob)) {
-                    targetMember = member;
-                }
-            }
+            if (member != null) if (member.getFName().equals(fname) && member.getLName().equals(lname) &&
+                    member.getDob().equals(dob)) targetMember = member;
         }
         return targetMember;
     }
@@ -79,19 +72,15 @@ public class MemberDatabase {
      * @return true if successfully added, false if otherwise.
      */
     public boolean add(Member member) {
-        if (find(member) != NOT_FOUND) {
-            return false;
-        } else {
-
+        if (find(member) != NOT_FOUND) return false;
+        else {
             for (int i = 0; i < mlist.length; i++) {
                 if (mlist[i] == null) {                // look for an empty index in array
                     mlist[i] = member;                 //  add the member
                     break;
                 }
             }
-            if (mlist[mlist.length - 1] != null) {
-                grow();
-            }
+            if (mlist[mlist.length - 1] != null) grow();
         }
         return true;
     }
@@ -118,43 +107,55 @@ public class MemberDatabase {
 
     /**
      * Prints the Member Data base as is
+     *
+     * @return member list
      */
-    public void print() {
-        if (mlist[0] == null) {
-            System.out.println("Member database is empty!");
-        } else {
-            System.out.println("-list of members-");
-            for (Member member : mlist) {
-                if (member != null) {
-                    System.out.println(member);
-                }
-            }
-            System.out.println("-end of list-");
-            System.out.println();
+    public String print() {
+        StringBuilder content = new StringBuilder();
+        String error;
+        String prefix;
+        String suffix;
+        if (mlist[0] == null) return error = "Member database is empty!\n";
+        else {
+            prefix = "-list of members-";
+            content.append("\n").append(prefix).append("\n");
+            for (Member member : mlist) if (member != null) content.append(member).append("\n");
+            suffix = "-end of list-";
+            content.append(suffix).append("\n");
         }
+        return content.toString();
     }
 
     /**
      * prints the Member database with fees
+     *
+     * @return member list but sorted
      */
-    public void printFee() {
-        if (mlist[0] == null) {
-            System.out.println("Member database is empty!");
-        } else {
-            System.out.println();
-            System.out.println("-list of members with membership fees-");
+    public String printFee() {
+        StringBuilder content = new StringBuilder();
+        String error;
+        String prefix;
+        String suffix;
+        if (mlist[0] == null) return error = "Member database is empty!\n";
+        else {
+            prefix = "-list of members with membership fees-";
+            content.append("\n").append(prefix).append("\n");
             for (Member member : mlist) {
-                if (member != null) {
-                    System.out.println(member + ", Membership fee: $" + member.membershipFee());
-                }
+                if (member != null)
+                    content.append(member).append(", Membership fee: $")
+                            .append(member.membershipFee()).append("\n");
+
             }
-            System.out.println("-end of list-");
-            System.out.println();
+            suffix = "-end of list-";
+            content.append(suffix).append("\n");
         }
+        return content.toString();
     }
 
     /**
      * Prints the Member Data base sorted by county and then zipcode
+     *
+     * @return member list but sorted
      */
     public void printByCounty() {
         Member[] memberList = mlist;
@@ -167,16 +168,7 @@ public class MemberDatabase {
 
             for (int i = 0; i < n - 1; i++) {
                 for (int k = 0; k < n - i - 1; k++) {
-                    if (memberList[k + 1] == null) {
-                        continue;
-                    }
-                    //String firstPosMember = memberList[k].getLocation().getCounty().toLowerCase();
-                    //String secondPosMember = memberList[k + 1].getLocation().getCounty().toLowerCase();
-                    //System.out.println("county Names: " + firstPosMember + "AND " + secondPosMember);
-                    //int pos = 0
-
-                    //int firstPosGoFirst = firstPosMember.compareTo(secondPosMember);
-
+                    if (memberList[k + 1] == null) continue;
                     if (memberList[k].getLocation().getCounty().toLowerCase().compareTo(memberList[k + 1].getLocation().getCounty().toLowerCase()) > 0) {
                         Member temp = memberList[k];
                         memberList[k] = memberList[k + 1];
@@ -186,9 +178,8 @@ public class MemberDatabase {
             }
             for (int i = 0; i < n - 1; i++) {
                 for (int k = 0; k < n - i - 1; k++) {
-                    if (memberList[k + 1] == null) {
-                        continue;
-                    }
+                    if (memberList[k + 1] == null) continue;
+
                     if (memberList[k].getLocation().getCounty().equals(memberList[k + 1].getLocation().getCounty())) {
                         if (memberList[k].getLocation().getZipCode() > memberList[k + 1].getLocation().getZipCode()) {
                             Member temp = memberList[k];
@@ -210,17 +201,18 @@ public class MemberDatabase {
 
     /**
      * Prints the Member Data base sorted the expiration date
+     *
+     * @return member list but sorted
      */
     public void printByExpirationDate() throws NullPointerException {
 
         Member[] memberList = mlist;
         int n = memberList.length;
         try {
-            if (mlist[0] == null) {
-                System.out.println("Member database is empty!");
-            } else {
-                System.out.println();
-                System.out.println("-list of members sorted by membership expiration date-");
+            if (mlist[0] == null) return error = "Member database is empty!\n";
+            else {
+                prefix = "-list of members sorted by membership expiration date-";
+                content.append("\n").append(prefix).append("\n");
                 for (int i = 0; i < n; i++) {
                     for (int j = 0; j < n - i - 1; j++) {
                         // 6 variables, first year month day
@@ -228,9 +220,7 @@ public class MemberDatabase {
                         int firstMonth = memberList[j].getExpire().getMonth();
                         int firstDay = memberList[j].getExpire().getDay();
                         //second year month day
-                        if (memberList[j + 1] == null) {
-                            break;
-                        }
+                        if (memberList[j + 1] == null) break;
                         int secondYear = memberList[j + 1].getExpire().getYear(); // why the fuck is this going out of bounds
                         int secondMonth = memberList[j + 1].getExpire().getMonth();
                         int secondDay = memberList[j + 1].getExpire().getDay();
@@ -255,23 +245,25 @@ public class MemberDatabase {
                         }
                     }
                 }
-                for (Member member : memberList) {
-                    if (member != null) {
-                        System.out.println(member);
-                    }
-                }
-                System.out.println("-end of list-");
-                System.out.println();
+                for (Member member : memberList) if (member != null) content.append(member).append("\n");
+                suffix = "-end of list-";
+                content.append(suffix).append("\n");
             }
         } catch (NullPointerException e) {
-            System.out.println("Member database is empty!");
+            return error = "Member database is empty!";
         }
+        return content.toString();
     }
 
     /**
      * Prints the Member Data base sorted by last name and then first name
+     *
+     * @return member databased sorted by name
      */
-    public void printByName() {
+    public String printByName() {
+        StringBuilder content = new StringBuilder();
+        String error;
+        String suffix;
         Member[] memberList = mlist;
         int n = memberList.length;
         //sort by last name
@@ -282,9 +274,7 @@ public class MemberDatabase {
             System.out.println("-list of members sorted by last name, and first name-");
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n - i - 1; j++) {
-                    if (memberList[j + 1] == null || memberList[j] == null) {
-                        break;
-                    }
+                    if (memberList[j + 1] == null || memberList[j] == null) break;
                     String firstLastName = memberList[j].getLName().toLowerCase();
                     String secondLastName = memberList[j + 1].getLName().toLowerCase();
                     if (firstLastName.equals(secondLastName)) {
@@ -296,16 +286,13 @@ public class MemberDatabase {
                             memberList[j] = memberList[j + 1];
                             memberList[j + 1] = temp;
                         }
-
                     }
                 }
             }
             //sort by firstName create two variables to make sure lastNames are equal to eachother or else continue
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n - i - 1; j++) {
-                    if (memberList[j + 1] == null || memberList[j] == null) {
-                        break;
-                    }
+                    if (memberList[j + 1] == null || memberList[j] == null) break;
                     String firstLastName = memberList[j].getLName().toLowerCase();
                     String secondLastName = memberList[j + 1].getLName().toLowerCase();
                     if (firstLastName.equals(secondLastName)) {
@@ -328,6 +315,7 @@ public class MemberDatabase {
             System.out.println("-end of list-");
             System.out.println();
         }
+        return content.toString();
     }
 
     /**
@@ -335,12 +323,15 @@ public class MemberDatabase {
      *
      * @throws FileNotFoundException if .txt not found.
      */
-    public void loadMemberList() throws FileNotFoundException {
+    public String loadMemberList() throws FileNotFoundException {
+        StringBuilder content = new StringBuilder();
+        String prefix;
+        String suffix;
         String fname, lname, dobString, expString, locationString;
         File text = new File("src/memberList.txt");
         Scanner memberList = new Scanner(text);
-        System.out.println();
-        System.out.println("-list of members loaded-");
+        prefix = "-list of members loaded-";
+        content.append(prefix).append("\n");
         while (memberList.hasNextLine()) {
             fname = memberList.next();
             lname = memberList.next();
@@ -359,15 +350,12 @@ public class MemberDatabase {
                     break;
                 }
             }
-
-            if (mlist[mlist.length - 1] != null) {
-                grow();
-            }
-
-            System.out.println(member);
+            if (mlist[mlist.length - 1] != null) grow();
+            content.append(member).append("\n");
         }
-        System.out.println("-end of list-");
-        System.out.println();
+        suffix = "-end of list-";
+        content.append(suffix).append("\n");
+        return content.toString();
     }
 }
 

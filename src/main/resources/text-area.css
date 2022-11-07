@@ -1,0 +1,11 @@
+.text-area {
+    text-area-background: #1e1e1e ;
+    -fx-text-fill: #B0B0B0;
+
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+    -fx-font-family: "JetBrainsMono"
+
+}
