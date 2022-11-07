@@ -11,24 +11,43 @@ package com.example.sma3;
  * @author David Kim, Sooho Lim
  */
 public class Family extends Member {
-    // subclass adds 3 fields
+    /**
+     * membership fee
+     */
     private double membershipFee;
+    /**
+     * monthly fee
+     */
     private double monthlyFee;
+    /**
+     * guest passes
+     */
     private int guestPasses;
-
+    /**
+     * defines the family rate
+     */
     private static final double FAMILY_RATE = 59.99;
+    /**
+     * defines the montly rate
+     */
     private static final int QUARTERLY = 3;
+    /**
+     * defines guest passes
+     */
     private static final int GUESTPASS = 1;
 
 
     /**
      * Default constructor of Member
      *
-     * @param fname    first name
-     * @param lname    last name
-     * @param dob      date of birth
-     * @param expire   membership expiration date
-     * @param location location of gym
+     * @param fname         first name
+     * @param lname         last name
+     * @param dob           date of birth
+     * @param expire        membership expiration date
+     * @param location      location of gym
+     * @param guestPasses   guest passes
+     * @param monthlyFee    monthly fee
+     * @param membershipFee membership fee
      */
     public Family(String fname, String lname, Date dob, Date expire, Location location,
                   double membershipFee, double monthlyFee, int guestPasses) {

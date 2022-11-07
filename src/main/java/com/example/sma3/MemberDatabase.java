@@ -14,10 +14,18 @@ import java.util.Scanner;
  * @author David Kim, Sooho Lim.
  */
 public class MemberDatabase {
-
-    private static final int NOT_FOUND = -1;    //  value to return if member is not found
-    private int size = 4;       // size of the array
-    private Member[] mlist = new Member[size]; // array for the database
+    /**
+     * defines value to return if not found
+     */
+    private static final int NOT_FOUND = -1;
+    /**
+     * defines the list of array
+     */
+    private int size = 4;
+    /**
+     * defines the array for the database
+     */
+    private Member[] mlist = new Member[size];
 
     /**
      * Default constructor. Creates a mlist object of default capacity.
@@ -325,6 +333,7 @@ public class MemberDatabase {
     /**
      * Loads the member list from a .txt file
      *
+     * @return string content
      * @throws FileNotFoundException if .txt not found.
      */
     public String loadMemberList() throws FileNotFoundException {
@@ -334,7 +343,7 @@ public class MemberDatabase {
         String fname, lname, dobString, expString, locationString;
         File text = new File("src/memberList.txt");
         Scanner memberList = new Scanner(text);
-        prefix = "-list of members loaded-";
+        prefix = "\n-list of members loaded-";
         content.append(prefix).append("\n");
         while (memberList.hasNextLine()) {
             fname = memberList.next();

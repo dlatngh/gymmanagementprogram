@@ -7,17 +7,33 @@ package com.example.sma3;
  * @author David Kim, Sooho Lim
  */
 public enum Location {
-    /*
-    5-digit zip codes are too big to be ints.
-    Omitted the first 0.
-    toString() adds the 0 back to the zipcodes.
+    /**
+     * defines the bridgewater location
      */
     BRIDGEWATER(8807, "SOMERSET"),
+    /**
+     * defines the edison location
+     */
     EDISON(8837, "MIDDLESEX"),
+    /**
+     * defines the franklin location
+     */
     FRANKLIN(8873, "SOMERSET"),
+    /**
+     * defines the piscataway location
+     */
     PISCATAWAY(8854, "MIDDLESEX"),
+    /**
+     * defines the somerville location
+     */
     SOMERVILLE(8876, "SOMERSET");
+    /**
+     * zipcodes
+     */
     private final int zipCode;
+    /**
+     * county names
+     */
     private final String county;
 
     /**

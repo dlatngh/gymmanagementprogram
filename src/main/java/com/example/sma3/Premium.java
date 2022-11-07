@@ -11,21 +11,38 @@ package com.example.sma3;
  * @author David Kim, Sooho Lim
  */
 public class Premium extends Family {
+    /**
+     * membership fee
+     */
     private double membershipFee;
+    /**
+     * monthly fee
+     */
     private double monthlyFee;
+    /**
+     * guest passes
+     */
     private int guestPasses;
-
+    /**
+     * defines billing cycle
+     */
     private static final int ANNUAL = 12;
+    /**
+     * defines guest passes
+     */
     private static final int GUESTPASSES = 3;
 
     /**
      * Default constructor of Member
      *
-     * @param fname    first name
-     * @param lname    last name
-     * @param dob      date of birth
-     * @param expire   membership expiration date
-     * @param location location of gym
+     * @param fname         first name
+     * @param lname         last name
+     * @param dob           date of birth
+     * @param expire        membership expiration date
+     * @param location      location of gym
+     * @param membershipFee membership fee
+     * @param monthlyFee    monthly fee
+     * @param guestPasses   guest passes
      */
     public Premium(String fname, String lname, Date dob, Date expire, Location location,
                    double membershipFee, double monthlyFee, int guestPasses) {
@@ -35,6 +52,7 @@ public class Premium extends Family {
         this.guestPasses = GUESTPASSES;
 
     }
+
 
     /**
      * Calculates the premium membership fee.
@@ -80,5 +98,24 @@ public class Premium extends Family {
     @Override
     public String toString() {
         return super.getMemberString() + ", (Premium) guest-passes remaining: " + guestPasses;
+    }
+
+    /**
+     * getter for membership fee
+     *
+     * @return membership fee
+     */
+    public double getMembershipFee() {
+        return membershipFee;
+    }
+
+    /**
+     * getter for monthly fee
+     *
+     * @return monthly fee
+     */
+    @Override
+    public double getMonthlyFee() {
+        return monthlyFee;
     }
 }

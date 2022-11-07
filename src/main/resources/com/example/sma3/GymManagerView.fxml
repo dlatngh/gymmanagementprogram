@@ -18,6 +18,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -41,85 +42,11 @@
                                       <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1e1e;">
                                               <children>
-                                    <Button fx:id="printB" layoutX="1069.0" layoutY="225.0" mnemonicParsing="false" onAction="#print" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="PRINT MEMBER LIST" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="sortLocB" layoutX="1069.0" layoutY="255.0" mnemonicParsing="false" onAction="#sortByCounty" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY COUNTY" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="sortNameB" layoutX="1069.0" layoutY="315.0" mnemonicParsing="false" onAction="#sortByName" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY LAST NAME" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="sortExpB" layoutX="1069.0" layoutY="285.0" mnemonicParsing="false" onAction="#sortByExpirationDate" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY EXP DATE" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="sortPriceB" layoutX="1069.0" layoutY="345.0" mnemonicParsing="false" onAction="#printFee" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY FEE" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="loadMemberB" layoutX="1076.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadMemberList" prefHeight="32.0" prefWidth="165.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="MEMBER LIST" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button fx:id="loadClassB" layoutX="1076.0" layoutY="90.0" mnemonicParsing="false" onAction="#loadSchedule" prefHeight="32.0" prefWidth="165.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text=" CLASS SCHEDULE" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Text fill="#de3845" layoutX="1076.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAD" textAlignment="CENTER" wrappingWidth="165.13671875">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="20.0" />
-                                       </font>
-                                    </Text>
                                                         <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="483.0" layoutY="72.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@../../../images/Scarlet-Knight.png" />
                                                             </image>
                                                         </ImageView>
-                                    <Button fx:id="printSchedB" layoutX="1069.0" layoutY="375.0" mnemonicParsing="false" onAction="#displaySchedule" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="PRINT SCHEDULE" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="13.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Text fill="#de3845" layoutX="1076.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRINT" textAlignment="CENTER" wrappingWidth="165.13671875">
-                                       <font>
-                                          <Font name="Montserrat Bold" size="20.0" />
-                                       </font>
-                                    </Text>
                                     <Text fill="#de3845" layoutX="72.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GYM MANAGER" wrappingWidth="410.0">
                                        <font>
                                           <Font name="Montserrat Bold" size="46.0" />
@@ -200,6 +127,84 @@
                                           <DropShadow />
                                        </effect>
                                     </Text>
+                                    <VBox layoutX="1082.0" layoutY="51.0" prefHeight="343.0" prefWidth="166.0" spacing="8.0">
+                                       <children>
+                                          <Text fill="#de3845" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAD" textAlignment="CENTER" wrappingWidth="165.13671875">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="loadMemberB" mnemonicParsing="false" onAction="#loadMemberList" prefHeight="32.0" prefWidth="165.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="MEMBER LIST" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="loadClassB" mnemonicParsing="false" onAction="#loadSchedule" prefHeight="32.0" prefWidth="165.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text=" CLASS SCHEDULE" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Text fill="#de3845" strokeType="OUTSIDE" strokeWidth="0.0" text="PRINT" textAlignment="CENTER" wrappingWidth="165.13671875">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="printB" mnemonicParsing="false" onAction="#print" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="PRINT MEMBER LIST" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="sortLocB" mnemonicParsing="false" onAction="#sortByCounty" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY COUNTY" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="sortNameB" mnemonicParsing="false" onAction="#sortByName" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY LAST NAME" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="sortExpB" mnemonicParsing="false" onAction="#sortByExpirationDate" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY EXP DATE" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="sortPriceB" mnemonicParsing="false" onAction="#printFee" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="SORT BY FEE" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                          <Button fx:id="printSchedB" mnemonicParsing="false" onAction="#displaySchedule" prefHeight="23.0" prefWidth="180.0" style="-fx-background-radius: 4; -fx-background-color: #de3845;" text="PRINT SCHEDULE" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Montserrat Bold" size="13.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </Button>
+                                       </children>
+                                    </VBox>
                                               </children>
                                           </AnchorPane>
                                       </content>
@@ -543,7 +548,7 @@
                           </TabPane>
                      </center>
                   </BorderPane>
-            <TextArea fx:id="displayOut" editable="false" prefHeight="249.0" prefWidth="1280.0" promptText="Gym Manager running..." style="-fx-background-color: #1e1e1e;" stylesheets="@../../../text-area.css" GridPane.rowIndex="1">
+            <TextArea fx:id="displayOut" editable="false" prefHeight="249.0" prefWidth="1280.0" style="-fx-background-color: #1e1e1e;" stylesheets="@../../../text-area.css" text="Gym Manager running..." GridPane.rowIndex="1">
                <font>
                   <Font name="JetBrains Mono Regular" size="14.0" />
                </font>

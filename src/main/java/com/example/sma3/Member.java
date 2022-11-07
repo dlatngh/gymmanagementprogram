@@ -8,14 +8,37 @@ package com.example.sma3;
  * @author David Kim, Sooho Lim
  */
 public class Member implements Comparable<Member> {
-    private String fname;       //  first name
-    private String lname;       //  last name
-    private Date dob;           //  date of birth
-    private Date expire;        //  expiration date
-    private Location location;  //  gym location by county
-
+    /**
+     * first name
+     */
+    private String fname;
+    /**
+     * last name
+     */
+    private String lname;
+    /**
+     * date of birth
+     */
+    private Date dob;
+    /**
+     * expiration date
+     */
+    private Date expire;
+    /**
+     * location
+     */
+    private Location location;
+    /**
+     * defines membership fee
+     */
     private static final double MEMBER_FEE = 29.99;
+    /**
+     * defines monthly fee
+     */
     private static final double MONTHLY_FEE = 39.99;
+    /**
+     * defines the cycle
+     */
     private static final int QUARTERLY = 3;
 
     /**
@@ -53,6 +76,11 @@ public class Member implements Comparable<Member> {
         return this.lname;
     }
 
+    /**
+     * getter for the name
+     *
+     * @return full name to string
+     */
     public String getName() {
         return this.fname + " " + this.lname;
     }

@@ -3,27 +3,33 @@ package com.example.sma3;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
-
+/**
+ * Runs and launches the Gym Manager GUI
+ *
+ * @author David Kim, Sooho Lim
+ */
 public class GymManagerMain extends Application {
-    Button butt1, butt2;
-    Label label1, label2;
+    /**
+     * main stage of GUI
+     */
     Stage primaryStage;
-    FlowPane fPane1, fPane2;
-    Scene scene2;
 
+    /**
+     * method to start the GUI ap[
+     *
+     * @param stage the stage
+     * @throws IOException in out exception
+     */
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(GymManagerMain.class.getResource("GymManagerView.fxml"));
-        TextArea textArea = new TextArea();
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Gym Manager");
         stage.getIcons().add(new Image("file:src/main/resources/images/Scarlet-Knight.png"));
@@ -31,6 +37,11 @@ public class GymManagerMain extends Application {
         stage.show();
     }
 
+    /**
+     * driver
+     *
+     * @param args command line
+     */
     public static void main(String[] args) {
         launch();
     }

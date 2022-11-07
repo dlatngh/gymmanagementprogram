@@ -10,11 +10,29 @@ import java.util.ArrayList;
  */
 
 public class FitnessClass {
+    /**
+     * class name
+     */
     private String className;
+    /**
+     * instructor
+     */
     private String instructor;
+    /**
+     * location
+     */
     private Location location;
+    /**
+     * time
+     */
     private Time time;
+    /**
+     * member list
+     */
     private ArrayList<Member> memberList = new ArrayList<>();
+    /**
+     * guest list
+     */
     private ArrayList<Member> guestList = new ArrayList<>();
 
     /**
@@ -23,6 +41,7 @@ public class FitnessClass {
      * @param className  time of class
      * @param instructor instructor name
      * @param location   the location of the class
+     * @param time       time
      */
     public FitnessClass(String className, String instructor, Location location, Time time) {
         this.className = className;
@@ -113,9 +132,4 @@ public class FitnessClass {
     public String toString() {
         return getClassName() + " - " + getInstructor() + ", " + getTime() + ", " + getLocation();
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }

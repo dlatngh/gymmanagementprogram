@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Array-based data structure to hold the list of FitnessClasses.
  * Provides methods for managing the list of FitnessClasses
  *
- * @author: David Kim, Sooho Lim
+ * @author David Kim, Sooho Lim
  */
 public class ClassSchedule {
     private int numClasses = 15;
@@ -70,9 +70,7 @@ public class ClassSchedule {
         FitnessClass targetClass = null;
         for (FitnessClass fitnessClass : classes) {
             if (fitnessClass != null) {
-                if (fitnessClass.getClassName().equalsIgnoreCase(className) &&
-                        fitnessClass.getInstructor().equalsIgnoreCase(instructor) &&
-                        fitnessClass.getLocation().equals(location)) {
+                if (fitnessClass.getClassName().equalsIgnoreCase(className) && fitnessClass.getInstructor().equalsIgnoreCase(instructor) && fitnessClass.getLocation().equals(location)) {
                     targetClass = fitnessClass;
                 }
             }
@@ -129,9 +127,7 @@ public class ClassSchedule {
      */
     public boolean isAtLocation(String location, String instructor, String className) {
         for (FitnessClass fitnessClass : classes) {
-            if (fitnessClass.getLocation().toString().equalsIgnoreCase(location) &&
-                    fitnessClass.getClassName().equalsIgnoreCase(className) &&
-                    fitnessClass.getInstructor().equalsIgnoreCase(instructor)) {
+            if (fitnessClass.getLocation().toString().equalsIgnoreCase(location) && fitnessClass.getClassName().equalsIgnoreCase(className) && fitnessClass.getInstructor().equalsIgnoreCase(instructor)) {
                 return true;
             }
         }
@@ -147,10 +143,7 @@ public class ClassSchedule {
      */
     public boolean isConflict(FitnessClass fitnessClass, Member member) {
         for (FitnessClass fitnessClasses : classes) {
-            if ((fitnessClass.getLocation().equals(fitnessClasses.getLocation()) &&
-                    fitnessClasses.getMemberList().contains(member)) ||
-                    (fitnessClass.getTime().equals(fitnessClasses.getTime()) &&
-                            fitnessClasses.getMemberList().contains(member))) {
+            if ((fitnessClass.getLocation().equals(fitnessClasses.getLocation()) && fitnessClasses.getMemberList().contains(member)) || (fitnessClass.getTime().equals(fitnessClasses.getTime()) && fitnessClasses.getMemberList().contains(member))) {
                 return true;
             }
         }

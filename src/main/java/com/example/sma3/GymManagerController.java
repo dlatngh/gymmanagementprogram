@@ -7,35 +7,76 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 
 import java.io.FileNotFoundException;
-import java.time.DateTimeException;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
+/**
+ * Methods to run the Gym Manager GUI.
+ *
+ * @author David Kim, Sooho Lim
+ */
 public class GymManagerController {
-    private static final double FAMILY_FEE = 29.99;             //  defines one time fee for family membership
-    private static final double FAMILY_MONTHLY = 59.99;         //  defines monthly fee for family
-    private static final int FAMILY_GUEST_PASS = 1;             //  defines how many guest passes for family membership
-    private static final double PREMIUM_FEE = 0.0;              //  defines the one time fee for premium membership
-    private static final double PREMIUM_MONTHLY = 29.99;        //  defines the monthly fee for the premium membership
-    private static final int PREMIUM_GUEST_PASS = 3;            //  defines how many guest passes for premium membership
-
+    /**
+     * defines one time fee for family membership
+     */
+    private static final double FAMILY_FEE = 29.99;
+    /**
+     * defines monthly fee for family
+     */
+    private static final double FAMILY_MONTHLY = 59.99;
+    /**
+     * defines how many guest passes for family membership
+     */
+    private static final int FAMILY_GUEST_PASS = 1;
+    /**
+     * defines the one time fee for premium membership
+     */
+    private static final double PREMIUM_FEE = 0.0;
+    /**
+     * defines the monthly fee for the premium membership
+     */
+    private static final double PREMIUM_MONTHLY = 29.99;
+    /**
+     * defines how many guest passes for premium membership
+     */
+    private static final int PREMIUM_GUEST_PASS = 3;
+    /**
+     * defines radio buttons
+     */
     @FXML
     protected RadioButton standard, family, premium;
+    /**
+     * defines text fields
+     */
     @FXML
     protected TextField fnameAdd, lnameAdd, locationFieldAdd,
             firstNameRemove, lastNameRemove,
             fnameM, lnameM, classNameM, instNameM, locationFieldM,
             fnameG, lnameG, classNameG, instNameG, locationFieldG;
+    /**
+     * defines date picker
+     */
     @FXML
     protected DatePicker dobFieldA, dobFieldR, dobFieldM, dobFieldG;
+    /**
+     * defines text Area
+     */
     @FXML
     protected TextArea displayOut;
+    /**
+     * defines all the buttons
+     */
     @FXML
     protected Button addMemberB, removeMemberB, checkInB, checkOutB, checkGuestB, checkOutGuestB, printB,
             sortNameB, sortExpB, sortLocB, sortPriceB, printSchedB, loadMemberB, loadClassB;
+    /**
+     * memberDatabase
+     */
     MemberDatabase memberDatabase = new MemberDatabase();
+    /**
+     * classSchedule
+     */
     ClassSchedule classSchedule = new ClassSchedule();
-
 
     /**
      * Helper method to see if member is present in member list
@@ -346,7 +387,7 @@ public class GymManagerController {
     /**
      * clear the text field to re-enter for removing members
      *
-     * @param event
+     * @param event click
      */
     @FXML
     private void removeFirstcleartextField(MouseEvent event) {
@@ -354,6 +395,11 @@ public class GymManagerController {
         firstNameRemove.setStyle("-fx-text-fill: black;");
     }
 
+    /**
+     * clears
+     *
+     * @param event text
+     */
     @FXML
     private void removeLastcleartextField(MouseEvent event) {
         lastNameRemove.clear();
@@ -394,7 +440,7 @@ public class GymManagerController {
     /**
      * clear the text field for fitness class regular members firstname/lastname
      *
-     * @param event
+     * @param event click
      */
     @FXML
     private void checkInFirstcleartextField(MouseEvent event) {
@@ -402,6 +448,11 @@ public class GymManagerController {
         fnameM.setStyle("-fx-text-fill: black;");
     }
 
+    /**
+     * clears
+     *
+     * @param event text
+     */
     @FXML
     private void checkInLastcleartextField(MouseEvent event) {
         lnameM.clear();
@@ -515,7 +566,7 @@ public class GymManagerController {
     /**
      * clear the text field for guestCheckin/guestCheckout
      *
-     * @param event
+     * @param event click
      */
     @FXML
     private void guestCheckFirstcleartextField(MouseEvent event) {
@@ -523,6 +574,11 @@ public class GymManagerController {
         fnameG.setStyle("-fx-text-fill: black;");
     }
 
+    /**
+     * clears
+     *
+     * @param event text
+     */
     @FXML
     private void guestCheckLastcleartextField(MouseEvent event) {
         lnameG.clear();

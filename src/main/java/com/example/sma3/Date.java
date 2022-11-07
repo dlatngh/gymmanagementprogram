@@ -70,14 +70,29 @@ public class Date implements Comparable<Date> {
         return date.getMonth() + "/" + date.getDay() + "/" + date.getYear();
     }
 
+    /**
+     * getter for month
+     *
+     * @return month
+     */
     public int getMonth() {
         return this.month;
     }
 
+    /**
+     * getter for day
+     *
+     * @return day
+     */
     public int getDay() {
         return this.day;
     }
 
+    /**
+     * getter for year
+     *
+     * @return year
+     */
     public int getYear() {
         return this.year;
     }
@@ -134,8 +149,8 @@ public class Date implements Comparable<Date> {
      *
      * @param date to compare
      * @return 0 if dates are equal,
-     * < 0 if date is lexicographically less than other date,
-     * > 0 if the date is lexicographically greater than the other date.
+     * less than 0 if date is lexicographically less than other date,
+     * greater than 0 if the date is lexicographically greater than the other date.
      */
     @Override
     public int compareTo(Date date) {
@@ -168,11 +183,13 @@ public class Date implements Comparable<Date> {
         }
     }
 
-    /*
+    /**
      * Checks if a date is a valid calendar date.
      * Months 1, 3, 5, 7, 8, 10, 12 has 31 days.
      * Months 4, 6, 9, 11 has 30 days.
      * Month 2 has 28 days in a non-leap year and 29 in a leap year.
+     *
+     * @return true if valid, false otherwise
      */
     public boolean isValid() {
         int indexFeb = 1;
@@ -232,56 +249,5 @@ public class Date implements Comparable<Date> {
             }
         }
         return false;
-    }
-    private static void testResult(Date date, boolean expectedOutput, boolean actualOutput){
-        System.out.println(date.toString());
-        System.out.print("isValid() returns "+ actualOutput);
-        if(actualOutput==expectedOutput){
-            System.out.println(", PASS.\n");
-        } else {
-            System.out.println(", FAIL.\n");
-        }
-    }
-    /**
-     * Testbed for the isValid method.
-     */
-    public static void main(String[] args) {
-
-        Date date = new Date("234/23/342");
-        boolean expectedOutput = false;
-        boolean actualoutput = date.isValid();
-        System.out.print("**Test case #1: invalid month and year should print false**");
-        testResult(date, expectedOutput, actualoutput);
-
-
-        Date test2 = new Date("13/32/2");       // passes is valid test, returns false test 2
-        Date test3 = new Date("10/4/2000");     // passes is valid test, returns true  test 3
-        Date test4 = new Date("10/24/2000");    // passes is valid test, returns true  test 4
-        Date test5 = new Date("2/29/2003");     // passes is valid test, returns false test 5
-        Date test6 = new Date("4/31/2003");     // passes is valid test, returns false test 6
-        Date test7 = new Date("13/31/2003");    // passes is valid test, returns false test 7
-        Date test8 = new Date("3/32/2003");     // passes is valid test, returns false test 8
-        Date test9 = new Date("-1/31/2003");    // passes is valid test, returns false test 9
-        Date test10 = new Date("4/31/2022");    // passes is valid test, returns false test 10
-
-        //  test case 2
-        System.out.println("test case 2 " + test2.dateToString(test2) + ": " + "is a " + test2.isValid() + " calendar date!");
-        // test case 3
-        System.out.println("test case 3 " + test3.dateToString(test3) + ": " + "is a " + test3.isValid() + " calendar date!");
-        //test case 4
-        System.out.println("test case 4 " + test4.dateToString(test4) + ": " + "is a " + test4.isValid() + " calendar date!");
-        //  test case 5
-        System.out.println("test case 5 " + test5.dateToString(test5) + ": " + "is a " + test5.isValid() + " calendar date!");
-        //  test case 6
-        System.out.println("test case 6 " + test6.dateToString(test6) + ": " + "is a " + test6.isValid() + " calendar date!");
-        //  test case 7
-        System.out.println("test case 7 " + test7.dateToString(test7) + ": " + "is a " + test7.isValid() + " calendar date!");
-        //  test case 8
-        System.out.println("test case 8 " + test8.dateToString(test8) + ": " + "is a " + test8.isValid() + " calendar date!");
-        //  test case 9
-        System.out.println("test case 9 " + test9.dateToString(test9) + ": " + "is a " + test9.isValid() + " calendar date!");
-        //  test case 0
-        System.out.println("test case 10 " + test10.dateToString(test10) + ": " + "is a " + test10.isValid() + " calendar date!");
-
     }
 }

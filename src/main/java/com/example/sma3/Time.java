@@ -6,10 +6,25 @@ package com.example.sma3;
  * @author David Kim, Sooho Lim
  */
 public enum Time {
+    /**
+     * defines the morning
+     */
     MORNING("9", "30"),
+    /**
+     * defines the afternoon
+     */
     AFTERNOON("14", "00"),
+    /**
+     * defines the evening
+     */
     EVENING("18", "30");
+    /**
+     * defines hour variable
+     */
     private final String hour;
+    /**
+     * defines minute variable
+     */
     private final String minute;
 
     /**
