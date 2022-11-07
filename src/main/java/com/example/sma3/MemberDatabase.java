@@ -157,15 +157,17 @@ public class MemberDatabase {
      *
      * @return member list but sorted
      */
-    public void printByCounty() {
+    public String printByCounty() {
+        StringBuilder content = new StringBuilder();
+        String error;
+        String prefix;
+        String suffix;
         Member[] memberList = mlist;
         int n = memberList.length;
-        if (mlist[0] == null) {
-            System.out.println("Member database is empty!");
-        } else {
-            System.out.println();
-            System.out.println("-list of members sorted by county and zipcode-");
-
+        if (mlist[0] == null) return error = "Member database is empty!\n";
+        else {
+            prefix = "-list of members sorted by county and zipcode-";
+            content.append("\n").append(prefix).append("\n");
             for (int i = 0; i < n - 1; i++) {
                 for (int k = 0; k < n - i - 1; k++) {
                     if (memberList[k + 1] == null) continue;
@@ -190,13 +192,13 @@ public class MemberDatabase {
                 }
             }
             for (Member member : memberList) {
-                if (member != null) {
-                    System.out.println(member);
-                }
+                if (member != null) content.append(member).append("\n");
+
             }
-            System.out.println("-end of list-");
-            System.out.println();
+            suffix = "-end of list-";
+            content.append(suffix).append("\n");
         }
+        return content.toString();
     }
 
     /**
@@ -204,8 +206,12 @@ public class MemberDatabase {
      *
      * @return member list but sorted
      */
-    public void printByExpirationDate() throws NullPointerException {
 
+    public String printByExpirationDate() throws NullPointerException {
+        StringBuilder content = new StringBuilder();
+        String error;
+        String prefix;
+        String suffix;
         Member[] memberList = mlist;
         int n = memberList.length;
         try {
@@ -268,10 +274,9 @@ public class MemberDatabase {
         int n = memberList.length;
         //sort by last name
         if (mlist[0] == null) {
-            System.out.println("Member database is empty!");
+            return error = "Member database is empty! \n";
         } else {
-            System.out.println();
-            System.out.println("-list of members sorted by last name, and first name-");
+            content.append("\n").append("-list of members sorted by last name, and first name-").append("\n");
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n - i - 1; j++) {
                     if (memberList[j + 1] == null || memberList[j] == null) break;
@@ -308,12 +313,11 @@ public class MemberDatabase {
                 }
             }
             for (Member member : memberList) {
-                if (member != null) {
-                    System.out.println(member);
-                }
+                if (member != null) content.append(member).append("\n");
+
             }
-            System.out.println("-end of list-");
-            System.out.println();
+            suffix = "-end of list-";
+            content.append(suffix).append("\n");
         }
         return content.toString();
     }
